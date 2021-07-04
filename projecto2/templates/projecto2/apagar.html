@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <form action="{% url 'projecto2:apagar' pessoa.id %}" method="post">
+        {% csrf_token %}
+        <p>Deseja apagar Contacto {{ pessoa.nome }}</p>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

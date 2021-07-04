@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form method="post" action="mailto:assimium2@gmail.com" autocomplete="on">
+        <header>
+            <h3>Quizz</h3>
+        </header>
+        <main>
+
+            <section class="quiz"> 
+
+
+                <fieldset>
+                    <div>
+                        
+
+                        <label>
+                            <legend>
+                                Gostou da Pagina
+                            </legend>
+                        
+                            <label for="sim">Sim</label>
+                            <input type="radio" name="visita" id="sim" required>
+
+                            <label for="nao">Não</label>
+                            <input type="radio" name="visita" id="nao">
+                        </label>
+
+
+
+                        <label>
+                            Qual é ponto que dá de 10..100
+                            <select name="cidade" id="">
+                                <option value="quebo">10</option>
+                                <option value="buba">25</option>
+                                <option value="guidali">50</option>
+                                <option value="b">100</option>
+                            </select>
+                        </label>
+                        
+
+
+
+
+                        <label>
+                            <legend>O tem a dizer sobre africa e africanos?</legend>
+                            <textarea name="areiaSugestao" id="fidib" cols="30" rows="10" maxlength="100"></textarea>
+                        </label>
+                        
+                        
+                        <label>
+                            <legend>Na escala de 0 á 100 quanto gosta de pagina?</legend>
+                            <input type="range" min="0" max="100" name="valorLido" value="0"
+                            oninput="valorApresentado.value = parseInt(valorLido.value)">
+                            <output name="valorApresentado" for="valorLido">0</output> %
+                        </label>
+
+                        <input class="submit" type="submit" value="Enviar Formulario">
+                        
+                        
+                        
+                        
+                    </div>
+             
+                </fieldset>
+
+
+
+            </section>
+
+        </main>
+
+        <footer>
+            <h3><a href="{% url 'projecto2:home' %}">Voltar</a></h3>
+        </footer>
+        
+        
+
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width = device-width initial-scale = 1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Lo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'projecto2/css/estilos.css' %}">
+</head>
+<body>
+    <h1>VIVA JÁ CONSEGUIU LOGAR</h1> <br>
+
+    <main>
+        <ul  class="botomVenda">
+            {% for contacto in contactos %}
+
+                <li class="botomVenda">Nome: {{ contacto.nome }} {{ contacto.apelido }} ||
+                    Data Nascimento: {{ contacto.dataNas }} ||
+                    email: {{ contacto.imail }}
+
+                    <p class="mae">
+                        <a class="link-cont" href="{% url 'projecto2:apagar' contacto.pk %}">Apagar</a>
+
+                        <a class="link-cont" href="{% url 'projecto2:editar' contacto.pk %}">Editar</a>
+                    </p>
+                    </li>
+            {% endfor %}
+        </ul>
+        <<a href="{% url 'projecto2:home' %}">Voltar</a>
+    </main>
+</body>
+</html>
