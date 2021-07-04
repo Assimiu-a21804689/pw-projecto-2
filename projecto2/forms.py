@@ -1,7 +1,6 @@
 from django.forms import ModelForm
-from .models import Encomendar
-from .models import Sobre
-from .models import Contacto
+from .models import *
+
 class EncomendarForms(ModelForm):
     class Meta:
         model = Encomendar
